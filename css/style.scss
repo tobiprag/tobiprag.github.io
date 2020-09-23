@@ -1,0 +1,121 @@
+@import 'font', 'resets';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 2em 2em;
+    border-bottom: 10px solid #232323;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 225px;
+    width: 500px;
+    z-index: -1;
+    background-image:
+    linear-gradient(25deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0)),
+    url('../img/bg.png');
+    // from https://pixabay.com/vectors/honeycomb-pattern-hexagon-design-34984/
+}
+
+.header {
+    display: flex;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    
+        flex: 1 1 0;
+
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top:15px;
+            bottom: 2px;
+            right: -12px;
+            width: 5px;
+            background-color: #232323;
+        }
+    }
+
+    &__name {
+        text-align: right;
+
+    }
+
+    &__first-name {
+        display: block;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        position: relative;
+    }
+
+    &__link::before {
+        position: absolute;
+        content: '>';
+        opacity: 0;
+        transition: ease-in-out 250ms;
+        transform: translateX(-5px);
+    
+    }
+
+    &__link:hover {
+        font-weight: bold;
+        opacity: .5;
+    }
+
+    &__link:hover::before {
+        opacity: 1;
+        transform: translateX(-1ch);
+    }
+}
+
+#about, #cv, #contact {
+    padding: 4em 0;
+}
+
+.cv__list {
+    max-width: 90vw;
+}
+
+.cv__item {
+    margin-bottom: 1em;
+}
+
+.contact__icon {
+    height: 2ch;;
+}
+
+.contact__link {
+    font-size: 2ch;;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 1em .5em;
+    }
+
+    .nav__link::before {
+        display: none;
+    }
+
+  }

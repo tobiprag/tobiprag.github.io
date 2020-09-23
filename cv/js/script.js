@@ -17,24 +17,7 @@
 //   }
 
 $(document).ready(function(){
-
-  $("#checkbox").click(function() { 
-    if ($("input[type=checkbox]").prop( 
-      ":checked")) { 
-        $('.lable--stripe').css({"color": "red"});
-  
-    } else { 
-      $('.lable--stripe').css({"color": "#232323"});
-  
-    } 
-}); 
-
-
   $('.nav__logo').addClass('menu_black');
-
-
-
-
 
 	$(window).scroll(function(){
   	var light_pos = $('#header').offset().top;

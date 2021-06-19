@@ -1,0 +1,38 @@
+:root {
+    --ff-serif: 'Roboto Slab', serif;
+    --ff-sans: 'Roboto', sans-serif;
+    --fc-main: #232323;
+    --fz-nav: 26px;
+    --fz-heaer: 28px;
+    --fz-name: 56px;
+    --fw-bold: bold;
+  }
+
+body {
+    font-family: var(--ff-sans);
+    color: var(--fc-main);
+} 
+
+.bold {
+    font-weight: var(--fw-bold);
+}
+
+.nav {
+    font-size: var(--fz-nav);
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.header {
+    &__title {
+        font-family: var(--ff-serif);
+        font-size: var(--fz-header);
+    }
+
+    &__first-name {
+        font-size: var(--fz-name);
+    }
+}

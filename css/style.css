@@ -1,117 +1,33 @@
 :root {
-  --ff-serif: 'Roboto Slab', serif;
-  --ff-sans: 'Roboto', sans-serif;
-  --fc-main: #232323;
-  --fz-nav: 26px;
-  --fz-heaer: 28px;
-  --fz-name: 56px;
-  --fw-bold: bold;
+  --ff-serif: "Roboto Slab", serif;
+  --ff-sans: "Roboto", sans-serif;
 }
 
 body {
   font-family: var(--ff-sans);
-  color: var(--fc-main);
 }
 
-.bold {
-  font-weight: var(--fw-bold);
-}
-
-.nav {
-  font-size: var(--fz-nav);
-}
-
-.nav__link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.header__title {
+.header__bg,
+.header__h2 {
   font-family: var(--ff-serif);
-  font-size: var(--fz-header);
-}
-
-.header__first-name {
-  font-size: var(--fz-name);
-}
-
-body, h1, h2, ul {
-  margin: 0;
-}
-
-.nav__list {
-  padding: 0;
-}
-
-.nav__list {
-  list-style: none;
 }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
   scroll-behavior: smooth;
-}
-
-body {
-  padding: 2em 2em;
-  border-bottom: 10px solid #232323;
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 225px;
-  width: 500px;
-  z-index: -1;
-  background-image: linear-gradient(25deg, white 50%, rgba(255, 255, 255, 0)), url("../img/bg.png");
+  height: 100%;
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  height: 609px;
+  padding: 0 4em;
   position: relative;
-}
-
-.header__title::after {
-  position: absolute;
-  content: '';
-  top: 15px;
-  bottom: 2px;
-  right: -12px;
-  width: 5px;
-  background-color: #232323;
-}
-
-.header__name {
-  text-align: right;
-}
-
-.header__first-name {
-  display: block;
-}
-
-.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,58 +35,58 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.nav__link {
-  position: relative;
+.header__bg {
+  width: 75%;
+  height: 65%;
+  background: url(https://unsplash.it/1000/1000);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #fff;
+  font-size: 4rem;
+  padding: 0 0 1rem 1rem;
 }
-
-.nav__link::before {
+.header__bg h1 {
+  font-size: 4rem;
+  background: -webkit-linear-gradient(#eee 55%, #266288 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header__intro {
+  background: #fff;
+  padding: 6rem;
   position: absolute;
-  content: '>';
-  opacity: 0;
-  -webkit-transition: ease-in-out 250ms;
-  transition: ease-in-out 250ms;
-  -webkit-transform: translateX(-5px);
-          transform: translateX(-5px);
+  top: 0;
+  right: 0%;
+  width: 50%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.nav__link:hover {
-  font-weight: bold;
-  opacity: .5;
+main {
+  min-height: 1000px;
+  background: #266288;
+  margin-top: -10rem;
 }
 
-.nav__link:hover::before {
-  opacity: 1;
-  -webkit-transform: translateX(-1ch);
-          transform: translateX(-1ch);
+.test {
+  position: absolute;
+  left: 5%;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-#about, #cv, #contact {
-  padding: 4em 0;
-}
-
-.cv__list {
-  max-width: 90vw;
-}
-
-.cv__item {
-  margin-bottom: 1em;
-}
-
-.contact__icon {
-  height: 2ch;
-}
-
-.contact__link {
-  font-size: 2ch;
-}
-
-@media screen and (max-width: 500px) {
-  body {
-    padding: 1em .5em;
-  }
-  .nav__link::before {
-    display: none;
-  }
-}
-/*# sourceMappingURL=style.css.map */

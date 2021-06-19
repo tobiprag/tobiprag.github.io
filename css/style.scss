@@ -1,72 +1,62 @@
-@import 'font', 'resets';
+@import "font", "resets", "menu", "main";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-html, body {
-    scroll-behavior: smooth;
-    height: 100%;
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
-.header {
-    // height: 80vh;
-    height: 609px;
-    padding: 0 4em;
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    &__bg {
-        width: 75%;
-        height: 65%;
-        background: url(https://unsplash.it/1000/1000);
-        background-size: cover;
-        background-position: center;
-
-        display: flex;
-        align-items: flex-end;
-        color: #fff;
-        font-size: 4rem;
-        padding: 0 0 1rem 1rem;
-
-        & h1 {
-            font-size: 4rem;
-            background: -webkit-linear-gradient(#eee 55%, #266288 55%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-    }
-    &__intro {
-        background: #fff;
-        padding: 6rem;
-
-        position: absolute;
-        top: 0;
-        right: 0%;
-
-        width: 50%;
-        height: 50%;
-
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-    }
+body > * {
+  padding: 0 1rem;
 }
 
-main {
-    min-height: 1000px;
-    background: #266288;
-    margin-top: -10rem;
+header {
+  min-height: 20rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: fixed;
+  margin-top: -20rem;
+  z-index: -1;
 }
 
-.test {
+h1 {
+  animation: 2s ease-out 0s 1 slideOnLoad;
+  position: relative;
+  font-size: 7rem;
+
+  & span {
+    animation: 2s ease-out 0s 1 slideOnLoad2;
+    display: block;
     position: absolute;
-    left: 5%;
-    background: rgba($color: #fff, $alpha: .50);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    top: 60%;
+  }
+}
+
+@keyframes slideOnLoad {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOnLoad2 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -1,13 +1,24 @@
 :root {
-    --ff-serif: 'Roboto Slab', serif;
-    --ff-sans: 'Roboto', sans-serif;
-  }
+  --ff-serif: "Roboto Slab", serif;
+  --ff-sans: "Roboto", sans-serif;
+  --fc-text: "3e3e3e";
+}
 
 body {
-    font-family: var(--ff-sans);
-} 
+  font-family: var(--ff-sans);
+  color: #3e3e3e;
+}
 
-.header__bg, 
-.header__h2 {
+h1,
+h2,
+a {
   font-family: var(--ff-serif);
+}
+
+p {
+  line-height: 1.5;
+}
+
+.nav__link {
+  font-size: 4rem;
 }

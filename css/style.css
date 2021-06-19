@@ -1,70 +1,97 @@
 :root {
   --ff-serif: "Roboto Slab", serif;
   --ff-sans: "Roboto", sans-serif;
+  --fc-text: "3e3e3e";
 }
 
 body {
   font-family: var(--ff-sans);
+  color: #3e3e3e;
 }
 
-.header__bg,
-.header__h2 {
+h1,
+h2,
+a {
   font-family: var(--ff-serif);
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+p {
+  line-height: 1.5;
 }
 
-html, body {
-  scroll-behavior: smooth;
-  height: 100%;
+.nav__link {
+  font-size: 4rem;
 }
 
-.header {
-  height: 609px;
-  padding: 0 4em;
-  position: relative;
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3e3e3e;
+}
+
+#openMenu {
+  display: none;
+}
+
+#openMenu:checked ~ nav {
+  right: 0;
+}
+
+#openMenu:checked ~ .label .menu {
+  background: #3e3e3e;
+  -webkit-transition: ease-in-out 500ms;
+  transition: ease-in-out 500ms;
+}
+
+#openMenu:checked ~ .label .menu .menu-icon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.label {
+  z-index: 99;
+}
+
+.menu {
+  z-index: 9999;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10vw;
+  right: 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.header__bg {
-  width: 75%;
-  height: 65%;
-  background: url(https://unsplash.it/1000/1000);
-  background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  color: #fff;
-  font-size: 4rem;
-  padding: 0 0 1rem 1rem;
-}
-.header__bg h1 {
-  font-size: 4rem;
-  background: -webkit-linear-gradient(#eee 55%, #266288 55%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.header__intro {
   background: #fff;
-  padding: 6rem;
-  position: absolute;
-  top: 0;
-  right: 0%;
+}
+.menu-icon {
   width: 50%;
-  height: 50%;
+}
+
+.nav {
+  display: unset;
+  position: fixed;
+  right: -100%;
+  width: 90vw;
+  height: 100vh;
+  background: #fff;
+  -webkit-transition: ease-in-out 500ms;
+  transition: ease-in-out 500ms;
+  -webkit-box-shadow: -10px -1px 25px 0px rgba(62, 62, 62, 0.75);
+          box-shadow: -10px -1px 25px 0px rgba(62, 62, 62, 0.75);
+}
+.nav__list {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,21 +99,176 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-right: 1rem;
+}
+
+.list-item {
+  text-align: right;
+  padding: 1rem 0;
 }
 
 main {
-  min-height: 1000px;
-  background: #266288;
-  margin-top: -10rem;
+  background: #02a6f2;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 20rem;
+}
+main section {
+  padding: 2.5rem 0;
 }
 
-.test {
+.portfolio {
+  margin: 0 -1rem;
+}
+.portfolio * + * {
+  margin-top: 1em;
+}
+.portfolio a {
+  color: #fff;
+}
+.portfolio-item {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+}
+.portfolio-item1 {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(62, 62, 62, 0.8)), to(rgba(62, 62, 62, 0.8))), url(https://unsplash.it/1000);
+  background: linear-gradient(0deg, rgba(62, 62, 62, 0.8), rgba(62, 62, 62, 0.8)), url(https://unsplash.it/1000);
+}
+.portfolio-item2 {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(62, 62, 62, 0.8)), to(rgba(62, 62, 62, 0.8))), url(https://unsplash.it/350/250);
+  background: linear-gradient(0deg, rgba(62, 62, 62, 0.8), rgba(62, 62, 62, 0.8)), url(https://unsplash.it/350/250);
+}
+.portfolio-item3 {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(62, 62, 62, 0.8)), to(rgba(62, 62, 62, 0.8))), url(https://unsplash.it/350/250);
+  background: linear-gradient(0deg, rgba(62, 62, 62, 0.8), rgba(62, 62, 62, 0.8)), url(https://unsplash.it/350/250);
+}
+.portfolio-item4 {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(62, 62, 62, 0.8)), to(rgba(62, 62, 62, 0.8))), url(https://unsplash.it/350/250);
+  background: linear-gradient(0deg, rgba(62, 62, 62, 0.8), rgba(62, 62, 62, 0.8)), url(https://unsplash.it/350/250);
+}
+.portfolio-item:hover {
+  background-image: url(https://unsplash.it/900);
+}
+.portfolio-item:hover a {
+  display: none;
+}
+
+.exp {
+  margin: 0 -1rem;
+  padding: 1rem;
+  background: #fff;
+}
+.exp__card {
+  margin-top: 2rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body > * {
+  padding: 0 1rem;
+}
+
+header {
+  min-height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  margin-top: -20rem;
+  z-index: -1;
+}
+
+h1 {
+  -webkit-animation: 2s ease-out 0s 1 slideOnLoad;
+          animation: 2s ease-out 0s 1 slideOnLoad;
+  position: relative;
+  font-size: 7rem;
+}
+h1 span {
+  -webkit-animation: 2s ease-out 0s 1 slideOnLoad2;
+          animation: 2s ease-out 0s 1 slideOnLoad2;
+  display: block;
   position: absolute;
-  left: 5%;
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  top: 60%;
+}
+
+@-webkit-keyframes slideOnLoad {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOnLoad {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideOnLoad2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOnLoad2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }

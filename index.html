@@ -1,28 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="img/icons/favi.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tobi Prag</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__bg">
-            <!-- <div class="test">test</div> -->
-            <h1 id="header__name">tobi prag</h1>
-        </div>
-        <div class="header__intro">
-            <h2 class="header__h2">Intro</h2>
-            <p class="header__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint consequatur eligendi beatae odit alias expedita ipsam exercitationem aliquid ad? Nemo culpa natus ut a soluta inventore recusandae distinctio optio sapiente.</p>
-        </div>
-    </header>
-    <main id="main"></main>
+  </head>
+  <body>
+    <header>
+      <h1>tobi<span>prag</span></h1>
 
-</body>
-<!-- Icons from https://fontawesome.com/ -->
-<!-- License: https://fontawesome.com/license -->
+      <input type="checkbox" id="openMenu" />
+      <label for="openMenu" class="label">
+        <div class="menu">
+          <img class="menu-icon" src="img/icons/bars.svg" alt="" />
+        </div>
+      </label>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="list-item"><a class="nav__link" href="#intro">link</a></li>
+          <li class="list-item">
+            <a class="nav__link" href="#portfolio">link</a>
+          </li>
+          <li class="list-item"><a class="nav__link" href="#exp">link</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="intro">
+        <h2>Intro</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
+          explicabo inventore accusamus omnis fugiat voluptatem. Est amet
+          consequuntur quia tenetur et placeat eligendi. Impedit veritatis
+          aliquam laboriosam voluptatem velit vitae.
+        </p>
+        <ul>
+          <li>bla la</li>
+          <li>bla la</li>
+          <li>bla la</li>
+        </ul>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <div class="portfolio-item portfolio-item1">
+          <a href="#">example link</a>
+        </div>
+        <div class="portfolio-item portfolio-item2">
+          <a href="#">example link</a>
+        </div>
+        <div class="portfolio-item portfolio-item3">
+          <a href="#">example link</a>
+        </div>
+        <div class="portfolio-item portfolio-item4">
+          <a href="#">example link</a>
+        </div>
+      </section>
+      <section class="exp" id="exp">
+        <div class="exp__card">
+          <h2 class="exp__heading">heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+            et.
+          </p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="exp__card">
+          <h2 class="exp__heading">heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+            et.
+          </p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="exp__card">
+          <h2 class="exp__heading">heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+            et.
+          </p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="exp__card">
+          <h2 class="exp__heading">heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+            et.
+          </p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <!-- Icon by <a href="https://freeicons.io/profile/722">fasil</a> on <a href="https://freeicons.io">freeicons.io</a> -->
 </html>

@@ -22,21 +22,20 @@ header {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  position: fixed;
-  margin-top: -20rem;
-  z-index: -1;
-}
 
-h1 {
-  animation: 2s ease-out 0s 1 slideOnLoad;
-  position: relative;
-  font-size: 7rem;
+  & h1 {
+    animation: 2s ease-out 0s 1 slideOnLoad;
+    position: relative;
+    font-size: 7rem;
+    position: fixed;
+    z-index: -1;
 
-  & span {
-    animation: 2s ease-out 0s 1 slideOnLoad2;
-    display: block;
-    position: absolute;
-    top: 60%;
+    & span {
+      animation: 2s ease-out 0s 1 slideOnLoad2;
+      display: block;
+      position: absolute;
+      top: 60%;
+    }
   }
 }
 

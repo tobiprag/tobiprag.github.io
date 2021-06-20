@@ -2,8 +2,7 @@ main {
   background: hsla(199, 98%, 48%, 1);
   min-height: 100vh;
   width: 100%;
-  margin-top: 20rem;
-  //   z-index: 99;
+  box-shadow: 0px -1px 15px -3px rgba(62, 62, 62, 0.5);
 
   & section {
     padding: 2.5rem 0;
@@ -18,14 +17,7 @@ main {
   & a {
     color: #fff;
   }
-  &-item {
-    // padding: 5rem;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-  }
+
   &-item1 {
     background: linear-gradient(
         0deg,
@@ -58,7 +50,16 @@ main {
       ),
       url(https://unsplash.it/350/250);
   }
-
+  &-item {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   &-item:hover {
     background-image: url(https://unsplash.it/900);
   }
@@ -70,9 +71,29 @@ main {
 .exp {
   margin: 0 -1rem;
   padding: 1rem;
+  padding-left: 3rem;
   background: #fff;
+  position: relative;
 
   &__card {
     margin-top: 2rem;
+  }
+
+  & .timeline {
+    width: 2px;
+    height: 90%;
+    background: #3e3e3e;
+    position: absolute;
+    left: 1.5rem;
+    top: 3.5rem;
+
+    &::before {
+      position: absolute;
+      content: url(../img/icons/arrow.svg);
+      height: 20px;
+      width: 20px;
+      left: -9px;
+      top: -0.8rem;
+    }
   }
 }

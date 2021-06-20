@@ -73,6 +73,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background: #fff;
+  z-index: 99;
 }
 .menu-icon {
   width: 50%;
@@ -114,7 +115,8 @@ main {
   background: #02a6f2;
   min-height: 100vh;
   width: 100%;
-  margin-top: 20rem;
+  -webkit-box-shadow: 0px -1px 15px -3px rgba(62, 62, 62, 0.5);
+          box-shadow: 0px -1px 15px -3px rgba(62, 62, 62, 0.5);
 }
 main section {
   padding: 2.5rem 0;
@@ -128,19 +130,6 @@ main section {
 }
 .portfolio a {
   color: #fff;
-}
-.portfolio-item {
-  height: 30vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-size: cover;
 }
 .portfolio-item1 {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(62, 62, 62, 0.8)), to(rgba(62, 62, 62, 0.8))), url(https://unsplash.it/1000);
@@ -158,6 +147,22 @@ main section {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(62, 62, 62, 0.8)), to(rgba(62, 62, 62, 0.8))), url(https://unsplash.it/350/250);
   background: linear-gradient(0deg, rgba(62, 62, 62, 0.8), rgba(62, 62, 62, 0.8)), url(https://unsplash.it/350/250);
 }
+.portfolio-item {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .portfolio-item:hover {
   background-image: url(https://unsplash.it/900);
 }
@@ -168,10 +173,28 @@ main section {
 .exp {
   margin: 0 -1rem;
   padding: 1rem;
+  padding-left: 3rem;
   background: #fff;
+  position: relative;
 }
 .exp__card {
   margin-top: 2rem;
+}
+.exp .timeline {
+  width: 2px;
+  height: 90%;
+  background: #3e3e3e;
+  position: absolute;
+  left: 1.5rem;
+  top: 3.5rem;
+}
+.exp .timeline::before {
+  position: absolute;
+  content: url(../img/icons/arrow.svg);
+  height: 20px;
+  width: 20px;
+  left: -9px;
+  top: -0.8rem;
 }
 
 * {
@@ -204,18 +227,16 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: fixed;
-  margin-top: -20rem;
-  z-index: -1;
 }
-
-h1 {
+header h1 {
   -webkit-animation: 2s ease-out 0s 1 slideOnLoad;
           animation: 2s ease-out 0s 1 slideOnLoad;
   position: relative;
   font-size: 7rem;
+  position: fixed;
+  z-index: -1;
 }
-h1 span {
+header h1 span {
   -webkit-animation: 2s ease-out 0s 1 slideOnLoad2;
           animation: 2s ease-out 0s 1 slideOnLoad2;
   display: block;
